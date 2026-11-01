@@ -1,0 +1,19 @@
+[Unit]
+Description=Movie Finder Pro Telegram bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=moviefinder
+Group=moviefinder
+WorkingDirectory=/opt/movie-finder-pro
+EnvironmentFile=/opt/movie-finder-pro/.env
+ExecStart=/opt/movie-finder-pro/.venv/bin/python /opt/movie-finder-pro/main.py
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

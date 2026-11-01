@@ -1,0 +1,5 @@
+python-telegram-bot==22.8
+peewee>=3.17,<4
+python-dotenv>=1.0,<2
+requests>=2.31,<3
+pytest>=8,<9
